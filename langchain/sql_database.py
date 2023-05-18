@@ -4,6 +4,11 @@ from __future__ import annotations
 import warnings
 from typing import Any, Iterable, List, Optional
 
+try:
+    from geoalchemy2 import Geometry, Geography
+except ImportError:
+    pass
+
 import sqlalchemy
 from sqlalchemy import (
     MetaData,
